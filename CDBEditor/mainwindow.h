@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
+#include "sqlitemanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +19,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    sqliteManager *m_sql;
+
+private slots:
+    void checkPub();
 };
 
 #endif // MAINWINDOW_H
