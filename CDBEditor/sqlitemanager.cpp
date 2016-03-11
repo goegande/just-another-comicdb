@@ -40,6 +40,6 @@ void sqliteManager::listSeriesD()
     while (query.next())
     {
         QString name = query.value(idName).toString();
-        qDebug() << "===" << name;
+        qDebug() << "===>" << name;
     }
 }
