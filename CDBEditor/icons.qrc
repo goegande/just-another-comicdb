@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icon-plus.png</file>
+        <file>res/icon-purge.png</file>
+        <file>res/barcode.png</file>
+    </qresource>
+</RCC>
