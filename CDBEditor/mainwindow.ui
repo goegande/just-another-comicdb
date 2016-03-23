@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>692</width>
-    <height>457</height>
+    <width>978</width>
+    <height>692</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,22 +25,8 @@
         <string>Add Publication</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Nummer</string>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="1">
          <widget class="QLineEdit" name="issue"/>
-        </item>
-        <item row="6" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Nummer (orig.)</string>
-          </property>
-         </widget>
         </item>
         <item row="5" column="3">
          <widget class="QPushButton" name="butAddSeriesEN">
@@ -52,6 +38,40 @@
             <normaloff>:/res/icon-plus.png</normaloff>:/res/icon-plus.png</iconset>
           </property>
          </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Nummer</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Nummer (orig.)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QPushButton" name="buttSave">
+          <property name="text">
+           <string>Hinzufügen</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Teil</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="5">
+         <widget class="QLineEdit" name="isuuePart"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="comboBox_2"/>
         </item>
         <item row="0" column="1">
          <widget class="QLineEdit" name="pubNo">
@@ -72,28 +92,12 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="1">
-         <widget class="QComboBox" name="comboBox_2"/>
-        </item>
-        <item row="0" column="6">
-         <widget class="QPushButton" name="buttSave">
+        <item row="6" column="6">
+         <widget class="QPushButton" name="butAddReprint">
           <property name="text">
-           <string>Hinzufügen</string>
+           <string>Inhalt übernehmen</string>
           </property>
          </widget>
-        </item>
-        <item row="6" column="3">
-         <widget class="QLabel" name="label_7">
-          <property name="text">
-           <string>Teil</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="5">
-         <widget class="QLineEdit" name="isuuePart"/>
-        </item>
-        <item row="6" column="1">
-         <widget class="QLineEdit" name="issueEN"/>
         </item>
         <item row="4" column="3">
          <widget class="QPushButton" name="butRemoveLine">
@@ -107,20 +111,6 @@
           </property>
          </widget>
         </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Inhalt</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="6">
-         <widget class="QPushButton" name="butAddReprint">
-          <property name="text">
-           <string>Inhalt übernehmen</string>
-          </property>
-         </widget>
-        </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_5">
           <property name="text">
@@ -128,15 +118,15 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="issueEN"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>PUB</string>
+           <string>Inhalt</string>
           </property>
          </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="cbSeriesD"/>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
@@ -153,6 +143,16 @@
           <property name="icon">
            <iconset resource="icons.qrc">
             <normaloff>:/res/barcode.png</normaloff>:/res/barcode.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbSeriesD"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>PUB</string>
           </property>
          </widget>
         </item>
@@ -178,11 +178,30 @@
       </widget>
      </widget>
     </item>
+    <item row="2" column="0">
+     <widget class="QTableView" name="tableView"/>
+    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pubNo</tabstop>
+  <tabstop>cbSeriesD</tabstop>
+  <tabstop>issue</tabstop>
+  <tabstop>butRemoveLine</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>issueEN</tabstop>
+  <tabstop>isuuePart</tabstop>
+  <tabstop>butAddReprint</tabstop>
+  <tabstop>buttSave</tabstop>
+  <tabstop>butAddSeriesD</tabstop>
+  <tabstop>butAddSeriesEN</tabstop>
+  <tabstop>butBarcode</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
  <resources>
   <include location="icons.qrc"/>
  </resources>
@@ -194,8 +213,8 @@
    <slot>checkPub()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>247</x>
-     <y>71</y>
+     <x>322</x>
+     <y>66</y>
     </hint>
     <hint type="destinationlabel">
      <x>443</x>

@@ -25,3 +25,9 @@ RESOURCES += \
     icons.qrc
 
 DISTFILES +=
+
+install_it.path = $$OUT_PWD
+install_it.files = *.db
+
+INSTALLS += \
+    install_it

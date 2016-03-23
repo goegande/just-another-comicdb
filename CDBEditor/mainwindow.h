@@ -3,7 +3,7 @@
 
 
 #include <QMainWindow>
-#include "sqlitemanager.h"
+#include <QSqlDatabase>
 
 namespace Ui {
 class MainWindow;
@@ -19,10 +19,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    sqliteManager *m_sql;
+    QSqlDatabase m_db;
 
 private slots:
     void checkPub();
+    void on_butAddSeriesD_clicked();
 };
 
 #endif // MAINWINDOW_H
