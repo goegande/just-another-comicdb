@@ -23,6 +23,9 @@ private:
 
 private slots:
     void checkPub();
+    void fillSeriesD();
+    void fillSeriesOrig();
+    void fillExpectedNextPUB();
     void on_butAddSeriesD_clicked();
 };
 

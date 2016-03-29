@@ -11,7 +11,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = CDBEditor
 TEMPLATE = app
 
-
 SOURCES += main.cpp\
         mainwindow.cpp \
     sqlitemanager.cpp
