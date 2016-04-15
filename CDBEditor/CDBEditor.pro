@@ -13,12 +13,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    sqlitemanager.cpp
+    sqlitemanager.cpp \
+    dialognewseriesorig.cpp
 
 HEADERS  += mainwindow.h \
-    sqlitemanager.h
+    sqlitemanager.h \
+    dialognewseriesorig.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialognewseriesorig.ui
 
 RESOURCES += \
     icons.qrc

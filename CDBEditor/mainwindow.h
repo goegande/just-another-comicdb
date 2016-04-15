@@ -13,6 +13,7 @@ class MainWindow;
 
 typedef struct sConent{
     int sID;
+    int tID;
     QString title;
     int number;
     int part;
@@ -52,7 +53,9 @@ private slots:
     void on_butAddReprint_clicked();
     void on_listWidget_clicked(const QModelIndex &index);
     void on_butRemoveLine_clicked();
-    void on_tabWidget_tabBarClicked(int index);
+    void on_buttSave_clicked();
+    void on_issue_textChanged(const QString &arg1);
+    void on_butAddSeriesEN_clicked();
 };
 
 #endif // MAINWINDOW_H

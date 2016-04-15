@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>689</width>
-    <height>424</height>
+    <width>690</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -27,6 +27,9 @@
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="5">
          <widget class="QPushButton" name="buttSave">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Hinzufügen</string>
           </property>
@@ -49,6 +52,9 @@
         </item>
         <item row="6" column="5">
          <widget class="QPushButton" name="butAddReprint">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="text">
            <string>Inhalt übernehmen</string>
           </property>
@@ -181,8 +187,27 @@
           <x>0</x>
           <y>0</y>
           <width>661</width>
-          <height>351</height>
+          <height>321</height>
          </rect>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="pbEditPub">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>330</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Edit</string>
         </property>
        </widget>
       </widget>
@@ -257,6 +282,22 @@
     <hint type="destinationlabel">
      <x>614</x>
      <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>issue</sender>
+   <signal>returnPressed()</signal>
+   <receiver>cbSeriesOrig</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>348</y>
     </hint>
    </hints>
   </connection>
