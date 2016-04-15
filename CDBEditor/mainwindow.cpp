@@ -64,7 +64,6 @@ void MainWindow::updateTree()
     QSqlQuery q("SELECT d.title as serie, p.issue as ausgabe, p.variant, e.title, r.reprintsISSUE, r.reprintsSUBPART FROM publication as p JOIN reprint as r ON r.publication = p.id JOIN SeriesD as d ON p.series = d.id JOIN SeriesORIG as e ON r.reprintsSERIES = e.id ORDER BY serie, ausgabe");
     QStandardItemModel *m = new QStandardItemModel(this);
     QStandardItem *parent;
-    m->appendRow(parent);
     QString prevClass;
     QString prevIssue;
     int children = 0;
