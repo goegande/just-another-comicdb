@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>978</width>
-    <height>692</height>
+    <width>689</width>
+    <height>424</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,17 +18,50 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Add Publication</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="5">
+         <widget class="QPushButton" name="buttSave">
+          <property name="text">
+           <string>Hinzufügen</string>
+          </property>
+         </widget>
+        </item>
         <item row="3" column="1">
          <widget class="QLineEdit" name="issue"/>
         </item>
-        <item row="5" column="3">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="butAddSeriesD">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/res/icon-plus.png</normalon>
+           </iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="5">
+         <widget class="QPushButton" name="butAddReprint">
+          <property name="text">
+           <string>Inhalt übernehmen</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Nummer (orig.)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
          <widget class="QPushButton" name="butAddSeriesEN">
           <property name="text">
            <string/>
@@ -46,32 +79,32 @@
           </property>
          </widget>
         </item>
-        <item row="6" column="0">
-         <widget class="QLabel" name="label_6">
+        <item row="5" column="1">
+         <widget class="QComboBox" name="cbSeriesOrig"/>
+        </item>
+        <item row="6" column="4">
+         <widget class="QLineEdit" name="isuuePart"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>Nummer (orig.)</string>
+           <string>Serie (orig.)</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="6">
-         <widget class="QPushButton" name="buttSave">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Hinzufügen</string>
+           <string>Serie</string>
           </property>
          </widget>
         </item>
-        <item row="6" column="3">
+        <item row="6" column="2">
          <widget class="QLabel" name="label_7">
           <property name="text">
            <string>Teil</string>
           </property>
          </widget>
-        </item>
-        <item row="6" column="5">
-         <widget class="QLineEdit" name="isuuePart"/>
-        </item>
-        <item row="5" column="1">
-         <widget class="QComboBox" name="cbSeriesOrig"/>
         </item>
         <item row="0" column="1">
          <widget class="QLineEdit" name="pubNo">
@@ -80,27 +113,11 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="3">
-         <widget class="QPushButton" name="butAddSeriesD">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/res/icon-plus.png</normalon>
-           </iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="6">
-         <widget class="QPushButton" name="butAddReprint">
-          <property name="text">
-           <string>Inhalt übernehmen</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="3">
+        <item row="4" column="2">
          <widget class="QPushButton" name="butRemoveLine">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -111,10 +128,17 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="label_5">
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbSeriesD"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="butBarcode">
           <property name="text">
-           <string>Serie (orig.)</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/res/barcode.png</normaloff>:/res/barcode.png</iconset>
           </property>
          </widget>
         </item>
@@ -128,27 +152,6 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Serie</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="4">
-         <widget class="QPushButton" name="butBarcode">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/res/barcode.png</normaloff>:/res/barcode.png</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="cbSeriesD"/>
-        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
@@ -156,30 +159,34 @@
           </property>
          </widget>
         </item>
-        <item row="4" column="1" colspan="2">
-         <widget class="QTableWidget" name="tableWidget">
-          <property name="rowCount">
-           <number>0</number>
+        <item row="4" column="1">
+         <widget class="QListWidget" name="listWidget">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
           </property>
-          <property name="columnCount">
-           <number>3</number>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
           </property>
-          <column/>
-          <column/>
-          <column/>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="tab_db">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Database</string>
        </attribute>
+       <widget class="QTreeView" name="treeViewDB">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>661</width>
+          <height>351</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QTableView" name="tableView"/>
     </item>
    </layout>
   </widget>
@@ -200,7 +207,6 @@
   <tabstop>butAddSeriesD</tabstop>
   <tabstop>butAddSeriesEN</tabstop>
   <tabstop>butBarcode</tabstop>
-  <tabstop>tableWidget</tabstop>
  </tabstops>
  <resources>
   <include location="icons.qrc"/>
@@ -219,6 +225,38 @@
     <hint type="destinationlabel">
      <x>443</x>
      <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>issueEN</sender>
+   <signal>returnPressed()</signal>
+   <receiver>butAddReprint</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>isuuePart</sender>
+   <signal>returnPressed()</signal>
+   <receiver>butAddReprint</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>458</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>369</y>
     </hint>
    </hints>
   </connection>
